@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article>
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <ul class="post-list">
+    {% assign filtered = site.posts | where_exp: "post", "post.categories contains page.category" %}
+    {% for post in filtered %}
+    <li class="post-card">
+      <p class="post-card__date">{{ post.date | date: "%d %B, %Y" }}</p>
+      <h2 class="post-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <p><a class="read-more" href="{{ post.url | relative_url }}">পুরোটা পড়ুন →</a></p>
+    </li>
+    {% else %}
+    <p>এই বিভাগে এখনো কোনো পোস্ট নেই।</p>
+    {% endfor %}
+  </ul>
+</article>
