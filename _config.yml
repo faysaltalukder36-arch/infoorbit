@@ -1,0 +1,30 @@
+title: মার্কেটিং বাংলা
+description: "সমসাময়িক বিষয় নিয়ে বিশ্লেষণ, SEO ও ডিজিটাল মার্কেটিং শেখার একটি ব্লগ"
+baseurl: "/blog-site"   # তোমার রিপোজিটরির নাম অনুযায়ী এটা পরিবর্তন করবে (নিচে নির্দেশনা দেওয়া আছে)
+url: ""                  # তোমার GitHub Pages URL (নির্দেশনায় বলা আছে)
+lang: bn
+
+# Author info
+author:
+  name: ফয়সাল
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO / feed
+feed:
+  path: feed.xml
+
+# Pagination-এর মতো ব্যবহার করা হবে হোমপেজে
+paginate: 6
+paginate_path: "/page:num/"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
