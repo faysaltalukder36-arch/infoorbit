@@ -27,47 +27,104 @@ body {
   padding: 0 20px;
 }
 
-/* Header */
+/* Header & Navbar Styling */
 .site-header {
-  border-bottom: 1px solid var(--color-border);
-  padding: 28px 0;
+  background-color: #0b1a30;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.site-header .wrapper {
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 
-.site-title {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-text);
+.site-logo {
+  color: #ffffff !important;
+  font-size: 22px;
+  font-weight: bold;
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: 1px;
 }
 
-.site-title:hover { color: var(--color-accent); }
+.main-nav ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+}
 
-.site-nav a {
-  color: var(--color-muted);
-  text-decoration: none;
+.main-nav li {
+  position: relative;
   margin-left: 20px;
-  font-size: 0.95rem;
-  font-weight: 500;
 }
 
-.site-nav a:hover { color: var(--color-accent); }
+.main-nav a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 12px;
+  display: block;
+  transition: color 0.3s ease;
+}
 
-/* Main */
+.main-nav a:hover {
+  color: #38bdf8 !important;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1e293b;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 8px 0 !important;
+  z-index: 1000;
+  flex-direction: column !important;
+}
+
+.dropdown-menu li {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.dropdown-menu a {
+  color: #e2e8f0 !important;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+  background-color: #334155;
+  color: #38bdf8 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex !important;
+}
+
+.arrow-down {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Main Content */
 main {
   padding: 48px 0 80px;
   min-height: 60vh;
 }
 
-/* Post list / cards */
 .post-list {
   list-style: none;
   padding: 0;
@@ -128,9 +185,7 @@ main {
 .read-more:hover { color: var(--color-accent-dark); }
 
 /* Single post */
-.post-header {
-  margin-bottom: 32px;
-}
+.post-header { margin-bottom: 32px; }
 
 .post-title {
   font-size: 2rem;
@@ -223,9 +278,7 @@ main {
 .site-footer a { color: var(--color-muted); }
 
 /* Home intro */
-.home-intro {
-  margin-bottom: 40px;
-}
+.home-intro { margin-bottom: 40px; }
 
 .home-intro h1 {
   font-size: 1.8rem;
@@ -240,94 +293,4 @@ main {
 @media (max-width: 600px) {
   .post-title { font-size: 1.5rem; }
   body { font-size: 16px; }
-}
-/* Header & Navbar Styling */
-.site-header {
-  background-color: #0b1a30; /* ছবির মতো গাঢ় নীল ব্যাকগ্রাউন্ড */
-  padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.site-logo {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: bold;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.main-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.main-nav li {
-  position: relative;
-  margin-left: 20px;
-}
-
-.main-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 10px 12px;
-  display: block;
-  transition: color 0.3s ease;
-}
-
-.main-nav a:hover {
-  color: #38bdf8; /* মাউস নিলে হালকা নীল রঙ */
-}
-
-/* Dropdown Menu Styling */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #1e293b;
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  padding: 8px 0;
-  z-index: 1000;
-}
-
-.dropdown-menu li {
-  margin: 0;
-  width: 100%;
-}
-
-.dropdown-menu a {
-  color: #e2e8f0;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: normal;
-}
-
-.dropdown-menu a:hover {
-  background-color: #334155;
-  color: #38bdf8;
-}
-
-/* Hover-এ ড্রপডাউন দেখানোর কোড */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.arrow-down {
-  font-size: 12px;
-  margin-left: 4px;
 }
