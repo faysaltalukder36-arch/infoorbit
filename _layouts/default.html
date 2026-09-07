@@ -6,7 +6,7 @@
     {% seo %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/infoorbit/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
@@ -32,7 +32,7 @@
 
         <li><a href="{{ site.baseurl }}/categories/todays-technology/">Today's Technology</a></li>
         <li><a href="{{ site.baseurl }}/categories/recent-news/">Recent News</a></li>
-        <li><a href="{{ site.baseurl }}/about.html">About Us</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
       </ul>
     </nav>
   </div>
