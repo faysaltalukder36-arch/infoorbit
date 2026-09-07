@@ -10,16 +10,33 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrapper">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">হোম</a>
-        <a href="{{ '/about/' | relative_url }}">সম্পর্কে</a>
-      </nav>
-    </div>
-  </header>
+ <header class="site-header">
+  <div class="header-container">
+    <!-- লোগো বা সাইটের নাম -->
+    <a href="{{ site.baseurl }}/" class="site-logo">INFOORBIT</a>
 
+    <!-- মূল নেভিগেশন মেনু -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        
+        <!-- ড্রপডাউন মেনু: Marketing -->
+        <li class="dropdown">
+          <a href="#">Marketing <i class="arrow-down">▾</i></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.baseurl }}/categories/business/">Business</a></li>
+            <li><a href="{{ site.baseurl }}/categories/digital-marketing/">Digital Marketing</a></li>
+            <li><a href="{{ site.baseurl }}/categories/marketing-psychology/">Marketing Psychology</a></li>
+          </ul>
+        </li>
+
+        <li><a href="{{ site.baseurl }}/categories/todays-technology/">Today's Technology</a></li>
+        <li><a href="{{ site.baseurl }}/categories/recent-news/">Recent News</a></li>
+        <li><a href="{{ site.baseurl }}/about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <main class="wrapper">
     {{ content }}
   </main>
